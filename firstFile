@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>title</title>
+ </head>
+ 
+ <body>
+ <script type="text/javascript">
+ //Write a JavaScript program that declares a function but calls it before it is declared. Because of function hoisting this will work in JavaScript. Go prove it!
+ 
+ console.log("Before definition:");
+ console.log(numberAdder(9, 10));
+ 
+function numberAdder(num1, num2){
+	return num1 + num2;
+}
+ console.log("\nAfter definition:");
+ console.log(numberAdder(9, 10));
+ 
+//Also write a function which is assigned to a variable. Call it before it is assigned and prove that this does not work.
+
+ console.log("\nBefore definition:");
+ //console.log(theSum(11, 11));           //Does not work
+
+var theProd = function productMaker(num1, num2){
+	return num1 * num2;
+}
+
+ console.log("After definition:");
+ console.log(theProd(10, 10));
+
+ </script>
+ </body>
+</html>
